@@ -1,0 +1,40 @@
+name: Create Pull Request
+
+on:
+  push:
+    branches:
+      - "master" # Set the branch you want to track, for example 'main' or 'master'
+
+jobs:
+  create-pr:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v2
+
+      - name: Set up Git
+        run: |
+          git config --global user.name "Your GitHub Username"
+          git config --global user.email "your-email@example.com"
+
+      - name: Create Pull Request
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Make sure we are in the correct branch
+          git checkout -b new-branch
+          git add .
+          git commit -m "Automated PR: Pushed changes"
+          git push origin new-branch
+
+          # Create a pull request to the 'main' branch
+          curl -X POST \
+            -H "Authorization: token $GITHUB_TOKEN" \
+            -d '{
+                  "title": "Automated PR: Pushed changes",
+                  "head": "new-branch",
+                  "base": "main",
+                  "body": "This is an automatically generated pull request"
+                }' \
+            https://api.github.com/repos/your-username/your-repository/pulls
