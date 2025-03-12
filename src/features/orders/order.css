@@ -1,0 +1,57 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left; /* Ensures left alignment */
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+/* tr:nth-child(even) {
+    background-color: white !important;
+} */
+
+.container {
+    width: 100%;
+    overflow-x: auto; /* Allows scrolling if needed */
+}
+
+.service-details-table {
+    border: none !important;
+    box-shadow: none !important;
+    background-color: white !important;
+}
+
+/* Optional: Remove any padding/margins from wrapper div */
+.service-details-container {
+    background-color: white !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+
+/* Ensure all table rows have a white background */
+.service-details-table tr {
+    background-color: white !important;
+}
+
+/* Remove any alternating row styles */
+.service-details-table tr:nth-child(even),
+.service-details-table tr:nth-child(odd) {
+    background-color: white !important;
+}
+
+/* Optional: Remove shadows or borders if they exist */
+.service-details-table td,
+.service-details-table th {
+    box-shadow: none !important;
+    border: 1px solid #ddd; /* Optional: Keep a clean border */
+}

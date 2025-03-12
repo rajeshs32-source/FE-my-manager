@@ -1,9 +1,17 @@
 import './App.css';
 // import { useState, useEffect } from "react";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import RegisterPage from "./pages/registerPage";
-import DashboardPage from "./pages/dashboard";
-import LoginPage from "./pages/loginpage";
+import { RegisterPage } from './features/auth/register/registerPage';
+import { DashboardPage } from "./features/dashboard/dashboard";
+import { LoginPage } from "./features/auth/login/loginpage";
+import { ServiceForm } from "./features/services/serviceForm"
+import { ServicesTable } from "./features/services/serviceList"
+import { OrderForm } from "./features/orders/orderForm"
+import { OrderList } from "./features/orders/orderList"
+import { DailyReportForm } from "./features/dailyReport/dailyReportForm"
+import { DailyScheduleForm } from "./features/dailySchedule/dailyScheduleForm"
+import { DailyScheduleList} from "./features/dailySchedule/dailyScheduleList"
+import { DailyReportList} from "./features/dailyReport/dailyReportList"
 
 // function App() {
 //   const [users, setUsers] = useState([]);
@@ -48,16 +56,24 @@ import LoginPage from "./pages/loginpage";
 function App() {
   return (
     <div className="App">
-        <BrowserRouter>
-            <Routes>
-                <Route path="/register" element={<RegisterPage/>} />
-                <Route path="/login" element={<LoginPage/>} />
-                <Route path="/dashboard" element={<DashboardPage/>} />
-                <Route path="/" element={<h1>Home</h1>} />
-            </Routes>
-        </BrowserRouter>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/register" element={<RegisterPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/dashboard" element={<DashboardPage />} />
+          <Route path="/service/create" element={<ServiceForm />} />
+          <Route path="/service" element={<ServicesTable />} />
+          <Route path="/order/create" element={<OrderForm />} />
+          <Route path="/orders" element={<OrderList />} />
+          <Route path="/dailyReport/create" element={<DailyReportForm />} />
+          <Route path="/dailySchedule/create" element={<DailyScheduleForm />} />
+          <Route path="/dailySchedule" element={<DailyScheduleList />} />
+          <Route path="/dailyReport" element={<DailyReportList />} />
+          <Route path="/" element={<h1>Home</h1>} />
+        </Routes>
+      </BrowserRouter>
 
-        
+
     </div>
   );
 }

@@ -1,0 +1,64 @@
+.login-block {
+    float: left;
+    width: 100%;
+    padding: 50px 0;
+    background: #fff;  /* ✅ Ensures full white background */
+}
+
+.container {
+    background: white; /* Ensure background is pure white */
+    border-radius: 10px; /* Maintain rounded corners */
+    width: 35%; /* Reduce width */
+    height: auto; /* Increase height dynamically */
+    padding: 30px; /* Add padding for top and bottom */
+    box-shadow: none; /* Add subtle shadow */
+}
+
+.login-sec {
+    padding: 40px; /* Increase padding for better spacing */
+    border: 2px solid #ddd; /* Ensure border is visible */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.btn-login {
+    height: 50px; /* Make button slightly taller */
+}
+
+input.form-control {
+    height: 50px; /* Increase input box height */
+}
+
+
+.login-sec h2 {
+    margin-bottom: 30px;
+    font-weight: 800;
+    font-size: 30px;
+    color: #0069c0;
+}
+
+.login-sec h2:after {
+    content: " ";
+    width: 100px;
+    height: 5px;
+    background: #6ec6ff;
+    display: block;
+    margin-top: 20px;
+    border-radius: 3px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-login {
+    background: #0069c0;
+    color: #fff;
+    font-weight: 600;
+}
+
+/* ✅ Ensures the page content is centered */
+.d-flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #fff;
+}

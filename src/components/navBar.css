@@ -1,0 +1,23 @@
+.custom-navbar {
+    padding: 0.1rem 1rem; /* Reduce top-bottom padding */
+    min-height: 40px; /* Reduce overall height */
+  }
+  .custom-navbar .nav-link {
+    padding: 0.3rem 0.6rem; /* Reduce link padding */
+    font-size: 14px; /* Decrease font size */
+  }
+  
+  .navbar {
+    all: unset; /* Resets all styles */
+    display: flex;
+    align-items: center;
+    background: #000; /* Set color explicitly */
+    height: 40px;
+    background-color: black !important;
+  }
+  body, html {
+    background-color: black !important; /* Set global background */
+  }.container {
+    background-color: white !important; /* Change to your desired color */
+    color: white; /* Ensures text remains visible */
+  }

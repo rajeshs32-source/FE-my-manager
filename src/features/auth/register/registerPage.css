@@ -1,0 +1,45 @@
+.container {
+    background: white; /* Keep background clean */
+    border-radius: 10px; /* Rounded corners */
+    width: 35%; /* Match login page */
+    height: auto; /* Adjust height dynamically */
+    padding: 30px; /* Ensure proper padding */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+.register-sec {
+    padding: 40px; /* Consistent padding */
+    border: 2px solid #ddd; /* Ensures visible border */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.register-form .form-group {
+    margin-bottom: 20px; /* Add space between fields */
+}
+
+.register-form label {
+    font-weight: bold;
+}
+
+.register-form .form-control {
+    height: 50px; /* Larger input fields */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.register-form button {
+    width: 100%;
+    height: 50px; /* Match button height with login */
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.register-form button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
